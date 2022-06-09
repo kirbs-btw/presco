@@ -1,21 +1,28 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:presco/friends.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MaterialApp(
+  initialRoute: '/home',
+  routes: {
+    '/home': (context) => MyHomePage(),
+    '/friends': (context) => FriendsPage(),
+  },
+  title: 'Presco',
+  theme: ThemeData(
+    scaffoldBackgroundColor: const Color(0xFF3b3e51),
+    primarySwatch: Colors.teal,
+    backgroundColor: Color(0xFF3b3e51),
+  ),
+  home: MyHomePage(title: 'Presco'),
+)
+);
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xFF3b3e51),
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
   }
 }
 
@@ -49,7 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
              IconButton(
                tooltip: 'friends',
                icon: const Icon(Icons.person),
-               onPressed: () {},
+               onPressed: () {
+                 Navigator.pushNamed(context, '/friends');
+               },
              ),
              const Spacer(),
              IconButton(
