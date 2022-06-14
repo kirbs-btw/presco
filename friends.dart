@@ -1,7 +1,11 @@
+// rights reserved to Bastian Lipka
+
+
 import 'dart:io';
 //import 'dart:js';
 import 'dart:ui';
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:presco/main.dart';
 
@@ -36,6 +40,9 @@ class _FriendsPage extends State<FriendsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // change bottom app bar with bottom navigation bar ?
+      // convex bottom bar ?  https://pub.dev/packages/convex_bottom_bar
+
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
         color: Color.fromRGBO(36, 35, 53, 1),
@@ -102,6 +109,7 @@ class _FriendsPage extends State<FriendsPage> {
               // color: Colors.teal,
               child: ListView(
                 children: <Widget>[
+                  // search input
                   Container(
                     margin: const EdgeInsets.fromLTRB(25, 25, 0, 0),
                     //color: Colors.red,
@@ -109,15 +117,30 @@ class _FriendsPage extends State<FriendsPage> {
                       children: <Widget>[
                         Icon(
                           Icons.search,
-                          size: 25,
-                          color: Colors.white,
+                          size: 40,
+                          color: Color.fromRGBO(36, 35, 53, 1),
                         ),
-                        Text(
-                          "Search",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontFamily: 'Gothamhtf',
+                        Container(
+                          width: 0.8 * MediaQuery.of(context).size.width,
+                          child: TextField(
+                            // onChanged: updateText,
+                            style: TextStyle(
                               color: Colors.white,
+                            ),
+                            decoration: InputDecoration(
+                              hintStyle: TextStyle(
+                                color: Colors.white,
+                                fontFamily: "Gothamhtf",
+                              ),
+                              contentPadding: EdgeInsets.all(10),
+                              fillColor: Color.fromRGBO(36, 35, 53, 1),
+                              filled: true,
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              hintText: 'Enter something',
+                            ),
                           ),
                         ),
                       ],
@@ -579,7 +602,6 @@ class _FriendsPage extends State<FriendsPage> {
           ],
         ),
       ),
-
     );
   }
 }
