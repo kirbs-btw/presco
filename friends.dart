@@ -8,6 +8,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:presco/main.dart';
+import 'package:presco/create.dart';
 
 
 class MyApp  extends StatelessWidget {
@@ -54,7 +55,9 @@ class _FriendsPage extends State<FriendsPage> {
               IconButton(
                 tooltip: 'add party',
                 icon: const Icon(Icons.add),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/create');
+                },
               ),
               const Spacer(),
               IconButton(
