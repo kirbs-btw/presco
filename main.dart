@@ -1,13 +1,25 @@
+/*
+The Presco (Work-title app)
+
+it's for finding parties
+hosted by others and found with this app
+
+for having fun
+ */
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:presco/friends.dart';
+import 'package:presco/create.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: '/home',
   routes: {
     '/home': (context) => MyHomePage(),
     '/friends': (context) => FriendsPage(),
+    '/create': (context) => CreatePartyPage(),
   },
   title: 'Presco',
   theme: ThemeData(
@@ -51,7 +63,9 @@ class _MyHomePageState extends State<MyHomePage> {
              IconButton(
                tooltip: 'add party',
                icon: const Icon(Icons.add),
-               onPressed: () {},
+               onPressed: () {
+                 Navigator.pushNamed(context, '/create');
+               },
              ),
              IconButton(
                tooltip: 'friends',
@@ -158,25 +172,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-
-/*
-new Container(
-              margin: const EdgeInsets.fromLTRB(0,  50, 0, 0),
-              width: MediaQuery.of(context).size.width * 0.85,
-              height: MediaQuery.of(context).size.width * 0.85,
-              decoration: new BoxDecoration(
-                borderRadius: new BorderRadius.circular(35.0),
-                color: Color(int.parse("0xff282a3e")),
-              ),
-            ),
-            new Container(
-              margin: const EdgeInsets.fromLTRB(0,  50, 0, 0),
-              width: MediaQuery.of(context).size.width * 0.85,
-              height: MediaQuery.of(context).size.width * 0.85,
-              decoration: new BoxDecoration(
-                borderRadius: new BorderRadius.circular(35.0),
-                color: Color(int.parse("0xff282a3e")),
-              ),
-            ),
- */
