@@ -85,7 +85,7 @@ class _CreatePartyPage extends State<CreatePartyPage> {
                 tooltip: 'party',
                 icon: const Icon(Icons.dashboard),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/main');
+                  Navigator.pushNamed(context, '/home');
                 },
               ),
               IconButton(
