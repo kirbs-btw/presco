@@ -36,6 +36,28 @@ class CreatePartyPage extends StatefulWidget {
 }
 
 class _CreatePartyPage extends State<CreatePartyPage> {
+  String partyName = '';
+  String partyDescription = '';
+  String partyDate = '';
+
+
+  void updateName(String text){
+    partyName = text;
+  }
+
+  void updateDescription(String text){
+    partyDescription = text;
+  }
+
+  void updateDate(String text){
+    partyDate = text;
+  }
+
+  void listParty(){
+    print(partyName);
+    print(partyDescription);
+    print(partyDate);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +128,7 @@ class _CreatePartyPage extends State<CreatePartyPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Container(
-              margin: const EdgeInsets.fromLTRB(25, 25, 0, 0),
+              margin: const EdgeInsets.fromLTRB(0, 25, 0, 0),
               decoration: new BoxDecoration(
                 borderRadius: new BorderRadius.circular(1000.0),
                 color: const Color.fromRGBO(36, 35, 53, 1),
@@ -118,11 +140,12 @@ class _CreatePartyPage extends State<CreatePartyPage> {
               ),
             ),
 
+            // name input
             Container(
-              margin: const EdgeInsets.fromLTRB(25, 25, 0, 0),
+              margin: const EdgeInsets.fromLTRB(0, 25, 0, 0),
               width: 0.8 * MediaQuery.of(context).size.width,
               child: TextField(
-                // onChanged: updateText,
+                onChanged: updateName,
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -138,16 +161,17 @@ class _CreatePartyPage extends State<CreatePartyPage> {
                     borderSide: BorderSide.none,
                     borderRadius: BorderRadius.circular(15),
                   ),
-                  hintText: 'Name?',
+                  hintText: 'Name',
                 ),
               ),
             ),
 
+            // description input
             Container(
-              margin: const EdgeInsets.fromLTRB(25, 25, 0, 0),
+              margin: const EdgeInsets.fromLTRB(0, 25, 0, 0),
               width: 0.8 * MediaQuery.of(context).size.width,
               child: TextField(
-                // onChanged: updateText,
+                onChanged: updateDescription,
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -168,11 +192,12 @@ class _CreatePartyPage extends State<CreatePartyPage> {
               ),
             ),
 
+            // date/time input
             Container(
-              margin: const EdgeInsets.fromLTRB(25, 25, 0, 0),
+              margin: const EdgeInsets.fromLTRB(0, 25, 0, 0),
               width: 0.8 * MediaQuery.of(context).size.width,
               child: TextField(
-                // onChanged: updateText,
+                onChanged: updateDate,
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -192,7 +217,18 @@ class _CreatePartyPage extends State<CreatePartyPage> {
                 ),
               ),
             ),
-
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 25, 0, 0),
+              width: 0.8 * MediaQuery.of(context).size.width,
+              child: RaisedButton(
+                onPressed: (){
+                  listParty();
+                },
+                textColor: Colors.white,
+                color: Colors.redAccent,
+                child: Text("Create"),
+              ),
+            ),
           ],
         ),
       ),
