@@ -191,7 +191,126 @@ class _CreatePartyPage extends State<CreatePartyPage> {
                 ),
               ),
             ),
-
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+              width: 0.8 * MediaQuery.of(context).size.width,
+              child: Wrap(
+                children: <Widget>[
+                  // tag widget example
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(0,  10, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    decoration: new BoxDecoration(
+                      borderRadius: new BorderRadius.circular(1000.0),
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft,
+                        colors: [Color.fromRGBO(229, 141, 144, 1), Color.fromRGBO(248, 56, 94, 1)],
+                      ),
+                    ),
+                    child: const Text(
+                      "Party",
+                      style: TextStyle(
+                        fontFamily: "Gothamhtf",
+                        color: Colors.white,
+                      ),
+                    ),
+                  ), // Tag Widget end
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(0,  10, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    decoration: new BoxDecoration(
+                      borderRadius: new BorderRadius.circular(1000.0),
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft,
+                        colors: [Color.fromRGBO(229, 141, 144, 1), Color.fromRGBO(248, 56, 94, 1)],
+                      ),
+                    ),
+                    child: const Text(
+                      "Cool chilly jazz",
+                      style: TextStyle(
+                        fontFamily: "Gothamhtf",
+                        color: Colors.white,
+                      ),
+                    ),
+                  ), // Tag Widget end
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(0,  10, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    decoration: new BoxDecoration(
+                      borderRadius: new BorderRadius.circular(1000.0),
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft,
+                        colors: [Color.fromRGBO(229, 141, 144, 1), Color.fromRGBO(248, 56, 94, 1)],
+                      ),
+                    ),
+                    child: const Text(
+                      "Nicer test",
+                      style: TextStyle(
+                        fontFamily: "Gothamhtf",
+                        color: Colors.white,
+                      ),
+                    ),
+                  ), // Tag Widget end
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(0,  10, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    decoration: new BoxDecoration(
+                      borderRadius: new BorderRadius.circular(1000.0),
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft,
+                        colors: [Color.fromRGBO(229, 141, 144, 1), Color.fromRGBO(248, 56, 94, 1)],
+                      ),
+                    ),
+                    child: const Text(
+                      "Mehr text",
+                      style: TextStyle(
+                        fontFamily: "Gothamhtf",
+                        color: Colors.white,
+                      ),
+                    ),
+                  ), // Tag Widget end
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(0,  10, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    decoration: new BoxDecoration(
+                      borderRadius: new BorderRadius.circular(1000.0),
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft,
+                        colors: [Color.fromRGBO(229, 141, 144, 1), Color.fromRGBO(248, 56, 94, 1)],
+                      ),
+                    ),
+                    child: const Text(
+                      "Das ist ganz langer text für den Wrap",
+                      style: TextStyle(
+                        fontFamily: "Gothamhtf",
+                        color: Colors.white,
+                      ),
+                    ),
+                  ), // Tag Widget end
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(0,  10, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    decoration: new BoxDecoration(
+                      borderRadius: new BorderRadius.circular(1000.0),
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.topLeft,
+                        colors: [Color.fromRGBO(229, 141, 144, 1), Color.fromRGBO(248, 56, 94, 1)],
+                      ),
+                    ),
+                    child: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    )
+                  ), // Tag Widget end
+                ],
+              ),
+            ),
             // date/time input
             Container(
               margin: const EdgeInsets.fromLTRB(0, 25, 0, 0),
