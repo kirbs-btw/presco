@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:presco/friends.dart';
 import 'package:presco/create.dart';
+import 'package:presco/settings.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: '/home',
@@ -20,6 +21,7 @@ void main() => runApp(MaterialApp(
     '/home': (context) => MyHomePage(),
     '/friends': (context) => FriendsPage(),
     '/create': (context) => CreatePartyPage(),
+    '/settings': (context) => SettingsPage(),
   },
   title: 'Presco',
   theme: ThemeData(
@@ -83,7 +85,9 @@ class _MyHomePageState extends State<MyHomePage> {
              IconButton(
                tooltip: 'settings',
                icon: const Icon(Icons.settings),
-               onPressed: () {},
+               onPressed: () {
+                 Navigator.pushNamed(context, '/settings');
+               },
              ),
            ],
          ),
