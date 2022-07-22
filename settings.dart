@@ -309,14 +309,19 @@ class _SettingsPage extends State<SettingsPage> {
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(0, 25, 0, 0),
-              width: 0.8 * MediaQuery.of(context).size.width,
+              width: 0.2 * MediaQuery.of(context).size.width,
               child: RaisedButton(
                 onPressed: (){
                   changeSettings();
                 },
                 textColor: Color.fromRGBO(36, 35, 53, 1),
-                color: Colors.white,
-                child: Text("Save"),
+                color: Color.fromRGBO(36, 35, 53, 1),
+                child: Text("Save",
+                  style: TextStyle(
+                  fontFamily: "Gothamhtf",
+                  color: Colors.white,
+                  ),
+                ),
               ),
             ),
           ],
